@@ -40,4 +40,12 @@ public class PrinterTest {
         assertEquals(30, printer.getToner());
     }
 
+    @Test
+    public void enoughPagesNotToner(){
+        Printer printer2 = new Printer(100,5);
+        printer2.printCopies(40, 2);
+        assertEquals(5, printer2.getToner());
+    }
+
+
 }
