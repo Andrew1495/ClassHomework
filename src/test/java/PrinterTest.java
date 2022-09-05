@@ -16,12 +16,12 @@ public class PrinterTest {
     }
     @Test
     public void printCopiesTrue(){
-        printer.printCopies(5);
-        assertEquals(5, printer.getPaper());
+        printer.printCopies(2,3);
+        assertEquals(4, printer.getPaper());
     }
     @Test
     public void printCopiesFalse(){
-        printer.printCopies(20);
+        printer.printCopies(20, 5);
         assertEquals(10, printer.getPaper());
     }
     @Test
@@ -31,12 +31,12 @@ public class PrinterTest {
 
     @Test
     public void minusToner(){
-        printer.printCopies(10);
-        assertEquals(20, printer.getToner());
+        printer.printCopies(2, 3);
+        assertEquals(24, printer.getToner());
     }
     @Test
     public void noChangeToner(){
-        printer.printCopies(40);
+        printer.printCopies(40, 50);
         assertEquals(30, printer.getToner());
     }
 

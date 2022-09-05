@@ -15,10 +15,10 @@ public class Printer {
         return this.paper;
     }
 
-    public  void printCopies(int copies){
-        if(copies <= this.paper){
-            this.paper -= copies;
-            this.toner -= copies;
+    public  void printCopies(int pages, int copies){
+        if(copies * pages <= this.paper){
+            this.paper -= copies * pages;
+            this.toner -= copies * pages ;
         }
 
     }
